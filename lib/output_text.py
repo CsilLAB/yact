@@ -10,7 +10,8 @@ def display_text(filename, scope):
 
     for item in json_obj.items():
         device_name = item[0]
-        print  device_name
+        print "====" + device_name "===="
+        print "--" + scope + '--'
         dataset = item[1][scope]
 
         headers = common.get_headers(dataset)
