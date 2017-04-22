@@ -9,10 +9,10 @@ def load_json_from_file(json_file):
     with open(DIRECTORY + json_file) as json_data:
         return json.load(json_data)
 
-def render_table_from_template(template_file, header, table, device, scope):
+def render_table_from_template(template_file, header, table, device, scope, text):
     env = Environment(loader=FileSystemLoader(DIRECTORY), undefined=StrictUndefined)
     template = env.get_template(template_file)
-    return template.render(header=header, table=table, device=device, scope=scope)
+    return template.render(header=header, table=table, device=device, scope=scope, text=text)
 
 def get_headers(dataset):
     return [' <> '] + (dataset.items()[0][1].keys())
