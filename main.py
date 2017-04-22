@@ -41,7 +41,7 @@ def get_devices_from_config(config, limit):
 def run(config, limit, scope):
     devices = get_devices_from_config(config, limit)
     try:
-        build_json(devices)
+        devices_info_bulk = build_json(devices)
     except:
         raise
 

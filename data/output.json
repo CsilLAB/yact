@@ -1,6 +1,116 @@
 {
     "eos-spine1": {
         "username": "ntc", 
+        "interfaces_ip": {
+            "Ethernet2": {
+                "ipv4": {
+                    "10.1.1.5": {
+                        "prefix_length": 30
+                    }
+                }, 
+                "ipv6": {}
+            }, 
+            "Management1": {
+                "ipv4": {
+                    "10.0.0.11": {
+                        "prefix_length": 24
+                    }
+                }, 
+                "ipv6": {}
+            }, 
+            "Ethernet1": {
+                "ipv4": {
+                    "10.1.1.1": {
+                        "prefix_length": 30
+                    }
+                }, 
+                "ipv6": {}
+            }, 
+            "Ethernet4": {
+                "ipv4": {
+                    "10.1.1.13": {
+                        "prefix_length": 30
+                    }
+                }, 
+                "ipv6": {}
+            }, 
+            "Ethernet3": {
+                "ipv4": {
+                    "10.1.1.9": {
+                        "prefix_length": 30
+                    }
+                }, 
+                "ipv6": {}
+            }
+        }, 
+        "lldp_neighbors": {
+            "Ethernet2": [
+                {
+                    "hostname": "eos-leaf2.ntc.com", 
+                    "port": "Ethernet1"
+                }
+            ], 
+            "Ethernet3": [
+                {
+                    "hostname": "vmx8", 
+                    "port": "ge-0/0/1"
+                }
+            ], 
+            "Ethernet1": [
+                {
+                    "hostname": "eos-leaf1.ntc.com", 
+                    "port": "Ethernet1"
+                }
+            ], 
+            "Ethernet4": [
+                {
+                    "hostname": "vmx9", 
+                    "port": "ge-0/0/0"
+                }
+            ], 
+            "Management1": [
+                {
+                    "hostname": "vmx8", 
+                    "port": "fxp0"
+                }, 
+                {
+                    "hostname": "vmx7", 
+                    "port": "fxp0"
+                }, 
+                {
+                    "hostname": "eos-leaf3.ntc.com", 
+                    "port": "Management1"
+                }, 
+                {
+                    "hostname": "vmx9", 
+                    "port": "fxp0"
+                }, 
+                {
+                    "hostname": "eos-spine3.ntc.com", 
+                    "port": "Management1"
+                }, 
+                {
+                    "hostname": "eos-leaf2.ntc.com", 
+                    "port": "Management1"
+                }, 
+                {
+                    "hostname": "eos-leaf1.ntc.com", 
+                    "port": "Management1"
+                }, 
+                {
+                    "hostname": "eos-leaf4.ntc.com", 
+                    "port": "Management1"
+                }, 
+                {
+                    "hostname": "eos-spine2.ntc.com", 
+                    "port": "Management1"
+                }, 
+                {
+                    "hostname": "eos-spine4.ntc.com", 
+                    "port": "Management1"
+                }
+            ]
+        }, 
         "interfaces_counters": {
             "Management1": {
                 "tx_multicast_packets": 0, 
@@ -115,12 +225,13 @@
                 "rx_unicast_packets": 0
             }
         }, 
+        "bgp_neighbors": {}, 
         "ip": "52.213.163.131", 
         "interfaces": {
             "Management1": {
                 "is_enabled": true, 
                 "description": "", 
-                "last_flapped": 1492826646.0074666, 
+                "last_flapped": 1492826646.0074673, 
                 "is_up": true, 
                 "mac_address": "2C:C2:60:0B:DA:88", 
                 "speed": 1000
@@ -128,7 +239,7 @@
             "Ethernet2": {
                 "is_enabled": true, 
                 "description": "CONNECTS_to_Ethernet1_on_eos-leaf2", 
-                "last_flapped": 1492826646.007467, 
+                "last_flapped": 1492826646.0074666, 
                 "is_up": true, 
                 "mac_address": "2C:C2:60:03:16:F6", 
                 "speed": 1000
@@ -136,7 +247,7 @@
             "Ethernet3": {
                 "is_enabled": true, 
                 "description": "CONNECTS_to_ge-0/0/1_on_vmx8", 
-                "last_flapped": 1492826645.8274558, 
+                "last_flapped": 1492826645.827456, 
                 "is_up": true, 
                 "mac_address": "2C:C2:60:16:4B:47", 
                 "speed": 1000
@@ -144,7 +255,7 @@
             "Ethernet1": {
                 "is_enabled": true, 
                 "description": "CONNECTS_to_Ethernet1_on_eos-leaf1", 
-                "last_flapped": 1492826646.0874715, 
+                "last_flapped": 1492826646.0874717, 
                 "is_up": true, 
                 "mac_address": "2C:C2:60:29:AB:7C", 
                 "speed": 1000
@@ -160,7 +271,7 @@
             "Ethernet7": {
                 "is_enabled": true, 
                 "description": "", 
-                "last_flapped": 1492826646.0074666, 
+                "last_flapped": 1492826646.007467, 
                 "is_up": true, 
                 "mac_address": "2C:C2:60:3A:E0:4D", 
                 "speed": 1000
@@ -168,7 +279,7 @@
             "Ethernet4": {
                 "is_enabled": true, 
                 "description": "CONNECTS_to_ge-0/0/0_on_vmx9", 
-                "last_flapped": 1492826645.8274553, 
+                "last_flapped": 1492826645.827456, 
                 "is_up": true, 
                 "mac_address": "2C:C2:60:58:43:E6", 
                 "speed": 1000
@@ -176,17 +287,311 @@
             "Ethernet5": {
                 "is_enabled": true, 
                 "description": "", 
-                "last_flapped": 1492826646.0074673, 
+                "last_flapped": 1492826646.007467, 
                 "is_up": true, 
                 "mac_address": "2C:C2:60:05:85:D6", 
                 "speed": 1000
             }
         }, 
         "driver": "eos", 
-        "password": "ntc123"
+        "bgp_neighbors_detail": {}, 
+        "lldp_neighbors_detail": {
+            "Ethernet2": [
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:56:29:D9", 
+                    "remote_system_enable_capab": "bridge, router", 
+                    "remote_port": "\"Ethernet1\"", 
+                    "parent_interface": "Ethernet2", 
+                    "remote_system_capab": "bridge, router", 
+                    "remote_system_name": "eos-leaf2.ntc.com"
+                }
+            ], 
+            "Management1": [
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Juniper Networks, Inc. vmx internet router, kernel JUNOS 15.1F4.15, Build date: 2015-12-23 19:22:55 UTC Copyright (c) 1996-2015 Juniper Networks, Inc.", 
+                    "remote_chassis_id": "00:05:86:71:09:C0", 
+                    "remote_system_enable_capab": "bridge, router", 
+                    "remote_port": "\"fxp0\"", 
+                    "parent_interface": "Management1", 
+                    "remote_system_capab": "bridge, router", 
+                    "remote_system_name": "vmx8"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Juniper Networks, Inc. vmx internet router, kernel JUNOS 15.1F4.15, Build date: 2015-12-23 19:22:55 UTC Copyright (c) 1996-2015 Juniper Networks, Inc.", 
+                    "remote_chassis_id": "00:05:86:71:5B:C0", 
+                    "remote_system_enable_capab": "bridge, router", 
+                    "remote_port": "\"fxp0\"", 
+                    "parent_interface": "Management1", 
+                    "remote_system_capab": "bridge, router", 
+                    "remote_system_name": "vmx7"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:12:1B:1E", 
+                    "remote_system_enable_capab": "bridge, router", 
+                    "remote_port": "\"Management1\"", 
+                    "parent_interface": "Management1", 
+                    "remote_system_capab": "bridge, router", 
+                    "remote_system_name": "eos-leaf3.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Juniper Networks, Inc. vmx internet router, kernel JUNOS 15.1F4.15, Build date: 2015-12-23 19:22:55 UTC Copyright (c) 1996-2015 Juniper Networks, Inc.", 
+                    "remote_chassis_id": "00:05:86:71:13:C0", 
+                    "remote_system_enable_capab": "bridge, router", 
+                    "remote_port": "\"fxp0\"", 
+                    "parent_interface": "Management1", 
+                    "remote_system_capab": "bridge, router", 
+                    "remote_system_name": "vmx9"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:22:34:FE", 
+                    "remote_system_enable_capab": "bridge, router", 
+                    "remote_port": "\"Management1\"", 
+                    "parent_interface": "Management1", 
+                    "remote_system_capab": "bridge, router", 
+                    "remote_system_name": "eos-spine3.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:56:29:D9", 
+                    "remote_system_enable_capab": "bridge, router", 
+                    "remote_port": "\"Management1\"", 
+                    "parent_interface": "Management1", 
+                    "remote_system_capab": "bridge, router", 
+                    "remote_system_name": "eos-leaf2.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:67:D6:FE", 
+                    "remote_system_enable_capab": "bridge, router", 
+                    "remote_port": "\"Management1\"", 
+                    "parent_interface": "Management1", 
+                    "remote_system_capab": "bridge, router", 
+                    "remote_system_name": "eos-leaf1.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:0E:10:41", 
+                    "remote_system_enable_capab": "bridge, router", 
+                    "remote_port": "\"Management1\"", 
+                    "parent_interface": "Management1", 
+                    "remote_system_capab": "bridge, router", 
+                    "remote_system_name": "eos-leaf4.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:28:D9:6B", 
+                    "remote_system_enable_capab": "bridge, router", 
+                    "remote_port": "\"Management1\"", 
+                    "parent_interface": "Management1", 
+                    "remote_system_capab": "bridge, router", 
+                    "remote_system_name": "eos-spine2.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:32:7E:DE", 
+                    "remote_system_enable_capab": "bridge, router", 
+                    "remote_port": "\"Management1\"", 
+                    "parent_interface": "Management1", 
+                    "remote_system_capab": "bridge, router", 
+                    "remote_system_name": "eos-spine4.ntc.com"
+                }
+            ], 
+            "Ethernet1": [
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:67:D6:FE", 
+                    "remote_system_enable_capab": "bridge, router", 
+                    "remote_port": "\"Ethernet1\"", 
+                    "parent_interface": "Ethernet1", 
+                    "remote_system_capab": "bridge, router", 
+                    "remote_system_name": "eos-leaf1.ntc.com"
+                }
+            ], 
+            "Ethernet4": [
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Juniper Networks, Inc. vmx internet router, kernel JUNOS 15.1F4.15, Build date: 2015-12-23 19:22:55 UTC Copyright (c) 1996-2015 Juniper Networks, Inc.", 
+                    "remote_chassis_id": "00:05:86:71:13:C0", 
+                    "remote_system_enable_capab": "bridge, router", 
+                    "remote_port": "\"ge-0/0/0\"", 
+                    "parent_interface": "Ethernet4", 
+                    "remote_system_capab": "bridge, router", 
+                    "remote_system_name": "vmx9"
+                }
+            ], 
+            "Ethernet3": [
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Juniper Networks, Inc. vmx internet router, kernel JUNOS 15.1F4.15, Build date: 2015-12-23 19:22:55 UTC Copyright (c) 1996-2015 Juniper Networks, Inc.", 
+                    "remote_chassis_id": "00:05:86:71:09:C0", 
+                    "remote_system_enable_capab": "bridge, router", 
+                    "remote_port": "\"ge-0/0/1\"", 
+                    "parent_interface": "Ethernet3", 
+                    "remote_system_capab": "bridge, router", 
+                    "remote_system_name": "vmx8"
+                }
+            ]
+        }, 
+        "facts": {
+            "os_version": "4.15.2F-2663444.4152F", 
+            "uptime": 45375, 
+            "interface_list": [
+                "Ethernet1", 
+                "Ethernet2", 
+                "Ethernet3", 
+                "Ethernet4", 
+                "Ethernet5", 
+                "Ethernet6", 
+                "Ethernet7", 
+                "Management1"
+            ], 
+            "vendor": "Arista", 
+            "serial_number": "", 
+            "model": "vEOS", 
+            "hostname": "eos-spine1", 
+            "fqdn": "eos-spine1.ntc.com"
+        }, 
+        "password": "ntc123", 
+        "bgp_config": {}
     }, 
     "vmx7": {
         "username": "ntc", 
+        "interfaces_ip": {
+            "lo0.0": {
+                "ipv4": {
+                    "7.7.7.7": {
+                        "prefix_length": 32
+                    }
+                }
+            }, 
+            "ge-0/0/1.0": {
+                "ipv4": {
+                    "10.1.254.6": {
+                        "prefix_length": 30
+                    }
+                }
+            }, 
+            "jsrv.1": {
+                "ipv4": {
+                    "128.0.0.127": {
+                        "prefix_length": 2
+                    }
+                }
+            }, 
+            "lo0.16384": {
+                "ipv4": {
+                    "127.0.0.1": {
+                        "prefix_length": 32
+                    }
+                }
+            }, 
+            "ge-0/0/0.0": {
+                "ipv4": {
+                    "10.1.254.2": {
+                        "prefix_length": 30
+                    }
+                }
+            }, 
+            "em1.0": {
+                "ipv4": {
+                    "128.0.0.4": {
+                        "prefix_length": 2
+                    }, 
+                    "10.0.0.4": {
+                        "prefix_length": 8
+                    }, 
+                    "128.0.0.1": {
+                        "prefix_length": 2
+                    }
+                }, 
+                "ipv6": {
+                    "fec0::a:0:0:4": {
+                        "prefix_length": 64
+                    }, 
+                    "fe80::2ec2:60ff:fe3e:c1c4": {
+                        "prefix_length": 64
+                    }
+                }
+            }, 
+            "fxp0.0": {
+                "ipv4": {
+                    "10.0.0.37": {
+                        "prefix_length": 24
+                    }
+                }
+            }
+        }, 
+        "lldp_neighbors": {
+            "ge-0/0/1": [
+                {
+                    "hostname": "vmx9", 
+                    "port": "ge-0/0/1"
+                }
+            ], 
+            "fxp0": [
+                {
+                    "hostname": "vmx8", 
+                    "port": "fxp0"
+                }, 
+                {
+                    "hostname": "vmx9", 
+                    "port": "fxp0"
+                }, 
+                {
+                    "hostname": "eos-spine1.ntc.com", 
+                    "port": "Management1"
+                }, 
+                {
+                    "hostname": "eos-leaf4.ntc.com", 
+                    "port": "Management1"
+                }, 
+                {
+                    "hostname": "eos-leaf3.ntc.com", 
+                    "port": "Management1"
+                }, 
+                {
+                    "hostname": "eos-spine3.ntc.com", 
+                    "port": "Management1"
+                }, 
+                {
+                    "hostname": "eos-spine2.ntc.com", 
+                    "port": "Management1"
+                }, 
+                {
+                    "hostname": "eos-spine4.ntc.com", 
+                    "port": "Management1"
+                }, 
+                {
+                    "hostname": "eos-leaf2.ntc.com", 
+                    "port": "Management1"
+                }, 
+                {
+                    "hostname": "eos-leaf1.ntc.com", 
+                    "port": "Management1"
+                }
+            ], 
+            "ge-0/0/0": [
+                {
+                    "hostname": "vmx8", 
+                    "port": "ge-0/0/0"
+                }
+            ]
+        }, 
         "interfaces_counters": {
             "ge-0/0/7": {
                 "tx_multicast_packets": 0, 
@@ -247,7 +652,7 @@
             "ge-0/0/3": {
                 "tx_multicast_packets": 0, 
                 "tx_discards": 0, 
-                "tx_octets": 417036, 
+                "tx_octets": 447672, 
                 "tx_errors": 0, 
                 "rx_octets": 0, 
                 "tx_unicast_packets": 0, 
@@ -261,7 +666,7 @@
             "ge-0/0/2": {
                 "tx_multicast_packets": 0, 
                 "tx_discards": 0, 
-                "tx_octets": 415932, 
+                "tx_octets": 446568, 
                 "tx_errors": 0, 
                 "rx_octets": 0, 
                 "tx_unicast_packets": 0, 
@@ -275,9 +680,9 @@
             "ge-0/0/1": {
                 "tx_multicast_packets": 0, 
                 "tx_discards": 0, 
-                "tx_octets": 539449, 
+                "tx_octets": 639023, 
                 "tx_errors": 0, 
-                "rx_octets": 426389, 
+                "rx_octets": 502926, 
                 "tx_unicast_packets": 0, 
                 "rx_errors": 0, 
                 "tx_broadcast_packets": 0, 
@@ -289,9 +694,9 @@
             "ge-0/0/0": {
                 "tx_multicast_packets": 0, 
                 "tx_discards": 0, 
-                "tx_octets": 542230, 
+                "tx_octets": 642179, 
                 "tx_errors": 0, 
-                "rx_octets": 512346, 
+                "rx_octets": 601266, 
                 "tx_unicast_packets": 0, 
                 "rx_errors": 0, 
                 "tx_broadcast_packets": 0, 
@@ -329,12 +734,51 @@
                 "rx_unicast_packets": 0
             }
         }, 
+        "bgp_neighbors": {
+            "global": {
+                "router_id": "7.7.7.7", 
+                "peers": {
+                    "8.8.8.8": {
+                        "is_enabled": true, 
+                        "uptime": 6304, 
+                        "remote_as": 171, 
+                        "description": "", 
+                        "remote_id": "8.8.8.8", 
+                        "local_as": 171, 
+                        "is_up": true, 
+                        "address_family": {
+                            "ipv4": {
+                                "sent_prefixes": 0, 
+                                "accepted_prefixes": 0, 
+                                "received_prefixes": 0
+                            }
+                        }
+                    }, 
+                    "9.9.9.9": {
+                        "is_enabled": true, 
+                        "uptime": 6344, 
+                        "remote_as": 171, 
+                        "description": "", 
+                        "remote_id": "9.9.9.9", 
+                        "local_as": 171, 
+                        "is_up": true, 
+                        "address_family": {
+                            "ipv4": {
+                                "sent_prefixes": 0, 
+                                "accepted_prefixes": 0, 
+                                "received_prefixes": 0
+                            }
+                        }
+                    }
+                }
+            }
+        }, 
         "ip": "52.214.223.142", 
         "interfaces": {
             "ge-0/0/7": {
                 "is_enabled": true, 
                 "description": "", 
-                "last_flapped": 41908.0, 
+                "last_flapped": 44972.0, 
                 "is_up": false, 
                 "mac_address": "00:05:86:71:54:07", 
                 "speed": 1000
@@ -342,7 +786,7 @@
             "ge-0/0/6": {
                 "is_enabled": true, 
                 "description": "", 
-                "last_flapped": 41908.0, 
+                "last_flapped": 44972.0, 
                 "is_up": false, 
                 "mac_address": "00:05:86:71:54:06", 
                 "speed": 1000
@@ -350,7 +794,7 @@
             "ge-0/0/5": {
                 "is_enabled": true, 
                 "description": "", 
-                "last_flapped": 41908.0, 
+                "last_flapped": 44972.0, 
                 "is_up": true, 
                 "mac_address": "2C:C2:60:36:AD:7E", 
                 "speed": 1000
@@ -358,7 +802,7 @@
             "ge-0/0/4": {
                 "is_enabled": true, 
                 "description": "", 
-                "last_flapped": 41908.0, 
+                "last_flapped": 44971.0, 
                 "is_up": true, 
                 "mac_address": "2C:C2:60:52:DF:F9", 
                 "speed": 1000
@@ -366,7 +810,7 @@
             "ge-0/0/3": {
                 "is_enabled": true, 
                 "description": "", 
-                "last_flapped": 41908.0, 
+                "last_flapped": 44971.0, 
                 "is_up": true, 
                 "mac_address": "2C:C2:60:75:E4:FA", 
                 "speed": 1000
@@ -374,7 +818,7 @@
             "ge-0/0/2": {
                 "is_enabled": true, 
                 "description": "", 
-                "last_flapped": 41908.0, 
+                "last_flapped": 44971.0, 
                 "is_up": true, 
                 "mac_address": "2C:C2:60:27:86:5F", 
                 "speed": 1000
@@ -382,7 +826,7 @@
             "ge-0/0/1": {
                 "is_enabled": true, 
                 "description": "CONNECTS_to_ge-0/0/1_on_vmx9", 
-                "last_flapped": 41908.0, 
+                "last_flapped": 44971.0, 
                 "is_up": true, 
                 "mac_address": "2C:C2:60:6D:F1:3E", 
                 "speed": 1000
@@ -390,7 +834,7 @@
             "ge-0/0/0": {
                 "is_enabled": true, 
                 "description": "CONNECTS_to_ge-0/0/0_on_vmx8", 
-                "last_flapped": 41908.0, 
+                "last_flapped": 44971.0, 
                 "is_up": true, 
                 "mac_address": "2C:C2:60:71:67:42", 
                 "speed": 1000
@@ -398,7 +842,7 @@
             "ge-0/0/9": {
                 "is_enabled": true, 
                 "description": "", 
-                "last_flapped": 41908.0, 
+                "last_flapped": 44972.0, 
                 "is_up": false, 
                 "mac_address": "00:05:86:71:54:09", 
                 "speed": 1000
@@ -406,7 +850,7 @@
             "ge-0/0/8": {
                 "is_enabled": true, 
                 "description": "", 
-                "last_flapped": 41908.0, 
+                "last_flapped": 44972.0, 
                 "is_up": false, 
                 "mac_address": "00:05:86:71:54:08", 
                 "speed": 1000
@@ -502,7 +946,7 @@
             "fxp0": {
                 "is_enabled": true, 
                 "description": "", 
-                "last_flapped": 42131.0, 
+                "last_flapped": 45195.0, 
                 "is_up": true, 
                 "mac_address": "2C:C2:60:12:39:19", 
                 "speed": 1000
@@ -605,6 +1049,1201 @@
             }
         }, 
         "driver": "junos", 
-        "password": "ntc123"
+        "bgp_neighbors_detail": {
+            "inet.0": {
+                "171": [
+                    {
+                        "accepted_prefix_count": 0, 
+                        "suppress_4byte_as": false, 
+                        "local_as_prepend": true, 
+                        "export_policy": "", 
+                        "multihop": false, 
+                        "input_messages": 234, 
+                        "previous_connection_state": "OpenConfirm", 
+                        "output_messages": 233, 
+                        "remove_private_as": false, 
+                        "multipath": false, 
+                        "messages_queued_out": 0, 
+                        "keepalive": 30, 
+                        "remote_as": 171, 
+                        "local_port": 179, 
+                        "active_prefix_count": 0, 
+                        "configured_holdtime": 90, 
+                        "routing_table": "inet.0", 
+                        "flap_count": 0, 
+                        "suppressed_prefix_count": 0, 
+                        "local_address": "7.7.7.7", 
+                        "input_updates": 1, 
+                        "configured_keepalive": 30, 
+                        "router_id": "8.8.8.8", 
+                        "connection_state": "Established", 
+                        "local_as": 171, 
+                        "remote_address": "8.8.8.8", 
+                        "advertised_prefix_count": 0, 
+                        "local_address_configured": false, 
+                        "import_policy": "", 
+                        "last_event": "RecvKeepAlive", 
+                        "remote_port": 53989, 
+                        "up": true, 
+                        "output_updates": 0, 
+                        "received_prefix_count": 0, 
+                        "holdtime": 90
+                    }, 
+                    {
+                        "accepted_prefix_count": 0, 
+                        "suppress_4byte_as": false, 
+                        "local_as_prepend": true, 
+                        "export_policy": "", 
+                        "multihop": false, 
+                        "input_messages": 197, 
+                        "previous_connection_state": "OpenConfirm", 
+                        "output_messages": 236, 
+                        "remove_private_as": false, 
+                        "multipath": false, 
+                        "messages_queued_out": 0, 
+                        "keepalive": 30, 
+                        "remote_as": 171, 
+                        "local_port": 179, 
+                        "active_prefix_count": 0, 
+                        "configured_holdtime": 90, 
+                        "routing_table": "inet.0", 
+                        "flap_count": 0, 
+                        "suppressed_prefix_count": 0, 
+                        "local_address": "7.7.7.7", 
+                        "input_updates": 1, 
+                        "configured_keepalive": 30, 
+                        "router_id": "9.9.9.9", 
+                        "connection_state": "Established", 
+                        "local_as": 171, 
+                        "remote_address": "9.9.9.9", 
+                        "advertised_prefix_count": 0, 
+                        "local_address_configured": false, 
+                        "import_policy": "", 
+                        "last_event": "RecvKeepAlive", 
+                        "remote_port": 63720, 
+                        "up": true, 
+                        "output_updates": 0, 
+                        "received_prefix_count": 0, 
+                        "holdtime": 90
+                    }
+                ]
+            }
+        }, 
+        "lldp_neighbors_detail": {
+            "ge-0/0/1": [
+                {
+                    "remote_port_description": "CONNECTS_to_ge-0/0/1_on_vmx7", 
+                    "remote_system_description": "Juniper Networks, Inc. vmx internet router, kernel JUNOS 15.1F4.15, Build date: 2015-12-23 19:22:55 UTC Copyright (c) 1996-2015 Juniper Networks, Inc.", 
+                    "remote_chassis_id": "00:05:86:71:13:C0", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "ge-0/0/1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "vmx9"
+                }
+            ], 
+            "fxp0": [
+                {
+                    "remote_port_description": "fxp0", 
+                    "remote_system_description": "Juniper Networks, Inc. vmx internet router, kernel JUNOS 15.1F4.15, Build date: 2015-12-23 19:22:55 UTC Copyright (c) 1996-2015 Juniper Networks, Inc.", 
+                    "remote_chassis_id": "00:05:86:71:09:C0", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "fxp0", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "vmx8"
+                }, 
+                {
+                    "remote_port_description": "fxp0", 
+                    "remote_system_description": "Juniper Networks, Inc. vmx internet router, kernel JUNOS 15.1F4.15, Build date: 2015-12-23 19:22:55 UTC Copyright (c) 1996-2015 Juniper Networks, Inc.", 
+                    "remote_chassis_id": "00:05:86:71:13:C0", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "fxp0", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "vmx9"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:0B:DA:88", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine1.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:0E:10:41", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf4.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:12:1B:1E", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf3.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:22:34:FE", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine3.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:28:D9:6B", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine2.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:32:7E:DE", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine4.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:56:29:D9", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf2.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:67:D6:FE", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf1.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "fxp0", 
+                    "remote_system_description": "Juniper Networks, Inc. vmx internet router, kernel JUNOS 15.1F4.15, Build date: 2015-12-23 19:22:55 UTC Copyright (c) 1996-2015 Juniper Networks, Inc.", 
+                    "remote_chassis_id": "00:05:86:71:09:C0", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "fxp0", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "vmx8"
+                }, 
+                {
+                    "remote_port_description": "fxp0", 
+                    "remote_system_description": "Juniper Networks, Inc. vmx internet router, kernel JUNOS 15.1F4.15, Build date: 2015-12-23 19:22:55 UTC Copyright (c) 1996-2015 Juniper Networks, Inc.", 
+                    "remote_chassis_id": "00:05:86:71:13:C0", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "fxp0", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "vmx9"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:0B:DA:88", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine1.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:0E:10:41", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf4.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:12:1B:1E", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf3.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:22:34:FE", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine3.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:28:D9:6B", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine2.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:32:7E:DE", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine4.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:56:29:D9", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf2.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:67:D6:FE", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf1.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "fxp0", 
+                    "remote_system_description": "Juniper Networks, Inc. vmx internet router, kernel JUNOS 15.1F4.15, Build date: 2015-12-23 19:22:55 UTC Copyright (c) 1996-2015 Juniper Networks, Inc.", 
+                    "remote_chassis_id": "00:05:86:71:09:C0", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "fxp0", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "vmx8"
+                }, 
+                {
+                    "remote_port_description": "fxp0", 
+                    "remote_system_description": "Juniper Networks, Inc. vmx internet router, kernel JUNOS 15.1F4.15, Build date: 2015-12-23 19:22:55 UTC Copyright (c) 1996-2015 Juniper Networks, Inc.", 
+                    "remote_chassis_id": "00:05:86:71:13:C0", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "fxp0", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "vmx9"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:0B:DA:88", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine1.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:0E:10:41", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf4.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:12:1B:1E", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf3.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:22:34:FE", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine3.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:28:D9:6B", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine2.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:32:7E:DE", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine4.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:56:29:D9", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf2.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:67:D6:FE", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf1.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "fxp0", 
+                    "remote_system_description": "Juniper Networks, Inc. vmx internet router, kernel JUNOS 15.1F4.15, Build date: 2015-12-23 19:22:55 UTC Copyright (c) 1996-2015 Juniper Networks, Inc.", 
+                    "remote_chassis_id": "00:05:86:71:09:C0", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "fxp0", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "vmx8"
+                }, 
+                {
+                    "remote_port_description": "fxp0", 
+                    "remote_system_description": "Juniper Networks, Inc. vmx internet router, kernel JUNOS 15.1F4.15, Build date: 2015-12-23 19:22:55 UTC Copyright (c) 1996-2015 Juniper Networks, Inc.", 
+                    "remote_chassis_id": "00:05:86:71:13:C0", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "fxp0", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "vmx9"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:0B:DA:88", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine1.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:0E:10:41", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf4.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:12:1B:1E", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf3.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:22:34:FE", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine3.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:28:D9:6B", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine2.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:32:7E:DE", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine4.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:56:29:D9", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf2.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:67:D6:FE", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf1.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "fxp0", 
+                    "remote_system_description": "Juniper Networks, Inc. vmx internet router, kernel JUNOS 15.1F4.15, Build date: 2015-12-23 19:22:55 UTC Copyright (c) 1996-2015 Juniper Networks, Inc.", 
+                    "remote_chassis_id": "00:05:86:71:09:C0", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "fxp0", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "vmx8"
+                }, 
+                {
+                    "remote_port_description": "fxp0", 
+                    "remote_system_description": "Juniper Networks, Inc. vmx internet router, kernel JUNOS 15.1F4.15, Build date: 2015-12-23 19:22:55 UTC Copyright (c) 1996-2015 Juniper Networks, Inc.", 
+                    "remote_chassis_id": "00:05:86:71:13:C0", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "fxp0", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "vmx9"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:0B:DA:88", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine1.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:0E:10:41", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf4.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:12:1B:1E", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf3.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:22:34:FE", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine3.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:28:D9:6B", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine2.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:32:7E:DE", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine4.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:56:29:D9", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf2.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:67:D6:FE", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf1.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "fxp0", 
+                    "remote_system_description": "Juniper Networks, Inc. vmx internet router, kernel JUNOS 15.1F4.15, Build date: 2015-12-23 19:22:55 UTC Copyright (c) 1996-2015 Juniper Networks, Inc.", 
+                    "remote_chassis_id": "00:05:86:71:09:C0", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "fxp0", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "vmx8"
+                }, 
+                {
+                    "remote_port_description": "fxp0", 
+                    "remote_system_description": "Juniper Networks, Inc. vmx internet router, kernel JUNOS 15.1F4.15, Build date: 2015-12-23 19:22:55 UTC Copyright (c) 1996-2015 Juniper Networks, Inc.", 
+                    "remote_chassis_id": "00:05:86:71:13:C0", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "fxp0", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "vmx9"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:0B:DA:88", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine1.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:0E:10:41", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf4.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:12:1B:1E", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf3.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:22:34:FE", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine3.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:28:D9:6B", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine2.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:32:7E:DE", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine4.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:56:29:D9", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf2.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:67:D6:FE", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf1.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "fxp0", 
+                    "remote_system_description": "Juniper Networks, Inc. vmx internet router, kernel JUNOS 15.1F4.15, Build date: 2015-12-23 19:22:55 UTC Copyright (c) 1996-2015 Juniper Networks, Inc.", 
+                    "remote_chassis_id": "00:05:86:71:09:C0", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "fxp0", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "vmx8"
+                }, 
+                {
+                    "remote_port_description": "fxp0", 
+                    "remote_system_description": "Juniper Networks, Inc. vmx internet router, kernel JUNOS 15.1F4.15, Build date: 2015-12-23 19:22:55 UTC Copyright (c) 1996-2015 Juniper Networks, Inc.", 
+                    "remote_chassis_id": "00:05:86:71:13:C0", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "fxp0", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "vmx9"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:0B:DA:88", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine1.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:0E:10:41", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf4.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:12:1B:1E", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf3.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:22:34:FE", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine3.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:28:D9:6B", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine2.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:32:7E:DE", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine4.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:56:29:D9", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf2.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:67:D6:FE", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf1.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "fxp0", 
+                    "remote_system_description": "Juniper Networks, Inc. vmx internet router, kernel JUNOS 15.1F4.15, Build date: 2015-12-23 19:22:55 UTC Copyright (c) 1996-2015 Juniper Networks, Inc.", 
+                    "remote_chassis_id": "00:05:86:71:09:C0", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "fxp0", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "vmx8"
+                }, 
+                {
+                    "remote_port_description": "fxp0", 
+                    "remote_system_description": "Juniper Networks, Inc. vmx internet router, kernel JUNOS 15.1F4.15, Build date: 2015-12-23 19:22:55 UTC Copyright (c) 1996-2015 Juniper Networks, Inc.", 
+                    "remote_chassis_id": "00:05:86:71:13:C0", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "fxp0", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "vmx9"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:0B:DA:88", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine1.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:0E:10:41", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf4.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:12:1B:1E", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf3.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:22:34:FE", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine3.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:28:D9:6B", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine2.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:32:7E:DE", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine4.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:56:29:D9", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf2.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:67:D6:FE", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf1.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "fxp0", 
+                    "remote_system_description": "Juniper Networks, Inc. vmx internet router, kernel JUNOS 15.1F4.15, Build date: 2015-12-23 19:22:55 UTC Copyright (c) 1996-2015 Juniper Networks, Inc.", 
+                    "remote_chassis_id": "00:05:86:71:09:C0", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "fxp0", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "vmx8"
+                }, 
+                {
+                    "remote_port_description": "fxp0", 
+                    "remote_system_description": "Juniper Networks, Inc. vmx internet router, kernel JUNOS 15.1F4.15, Build date: 2015-12-23 19:22:55 UTC Copyright (c) 1996-2015 Juniper Networks, Inc.", 
+                    "remote_chassis_id": "00:05:86:71:13:C0", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "fxp0", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "vmx9"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:0B:DA:88", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine1.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:0E:10:41", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf4.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:12:1B:1E", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf3.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:22:34:FE", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine3.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:28:D9:6B", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine2.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:32:7E:DE", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine4.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:56:29:D9", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf2.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:67:D6:FE", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf1.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "fxp0", 
+                    "remote_system_description": "Juniper Networks, Inc. vmx internet router, kernel JUNOS 15.1F4.15, Build date: 2015-12-23 19:22:55 UTC Copyright (c) 1996-2015 Juniper Networks, Inc.", 
+                    "remote_chassis_id": "00:05:86:71:09:C0", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "fxp0", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "vmx8"
+                }, 
+                {
+                    "remote_port_description": "fxp0", 
+                    "remote_system_description": "Juniper Networks, Inc. vmx internet router, kernel JUNOS 15.1F4.15, Build date: 2015-12-23 19:22:55 UTC Copyright (c) 1996-2015 Juniper Networks, Inc.", 
+                    "remote_chassis_id": "00:05:86:71:13:C0", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "fxp0", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "vmx9"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:0B:DA:88", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine1.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:0E:10:41", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf4.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:12:1B:1E", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf3.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:22:34:FE", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine3.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:28:D9:6B", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine2.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:32:7E:DE", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-spine4.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:56:29:D9", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf2.ntc.com"
+                }, 
+                {
+                    "remote_port_description": "", 
+                    "remote_system_description": "Arista Networks EOS version 4.15.2F running on an Arista Networks vEOS", 
+                    "remote_chassis_id": "2C:C2:60:67:D6:FE", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "Management1", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "eos-leaf1.ntc.com"
+                }
+            ], 
+            "ge-0/0/0": [
+                {
+                    "remote_port_description": "CONNECTS_to_ge-0/0/0_on_vmx7", 
+                    "remote_system_description": "Juniper Networks, Inc. vmx internet router, kernel JUNOS 15.1F4.15, Build date: 2015-12-23 19:22:55 UTC Copyright (c) 1996-2015 Juniper Networks, Inc.", 
+                    "remote_chassis_id": "00:05:86:71:09:C0", 
+                    "remote_system_enable_capab": "Bridge Router", 
+                    "remote_port": "ge-0/0/0", 
+                    "parent_interface": "-", 
+                    "remote_system_capab": "Bridge Router", 
+                    "remote_system_name": "vmx8"
+                }
+            ]
+        }, 
+        "facts": {
+            "os_version": "15.1F4.15", 
+            "uptime": 45300, 
+            "interface_list": [
+                "ge-0/0/0", 
+                "lc-0/0/0", 
+                "pfe-0/0/0", 
+                "pfh-0/0/0", 
+                "ge-0/0/1", 
+                "ge-0/0/2", 
+                "ge-0/0/3", 
+                "ge-0/0/4", 
+                "ge-0/0/5", 
+                "ge-0/0/6", 
+                "ge-0/0/7", 
+                "ge-0/0/8", 
+                "ge-0/0/9", 
+                ".local.", 
+                "cbp0", 
+                "demux0", 
+                "dsc", 
+                "em1", 
+                "em2", 
+                "esi", 
+                "fxp0", 
+                "gre", 
+                "ipip", 
+                "irb", 
+                "jsrv", 
+                "lo0", 
+                "lsi", 
+                "mtun", 
+                "pimd", 
+                "pime", 
+                "pip0", 
+                "pp0", 
+                "tap", 
+                "vtep"
+            ], 
+            "vendor": "Juniper", 
+            "serial_number": "VMXab", 
+            "model": "VMX", 
+            "hostname": "vmx7", 
+            "fqdn": "vmx7.ntc.com"
+        }, 
+        "password": "ntc123", 
+        "bgp_config": {
+            "internal-peers": {
+                "neighbors": {
+                    "8.8.8.8": {
+                        "export_policy": "", 
+                        "remote_as": 0, 
+                        "route_reflector_client": false, 
+                        "prefix_limit": {}, 
+                        "local_as": 0, 
+                        "nhs": false, 
+                        "import_policy": "", 
+                        "local_address": "", 
+                        "authentication_key": "", 
+                        "description": ""
+                    }, 
+                    "9.9.9.9": {
+                        "export_policy": "", 
+                        "remote_as": 0, 
+                        "route_reflector_client": false, 
+                        "prefix_limit": {}, 
+                        "local_as": 0, 
+                        "nhs": false, 
+                        "import_policy": "", 
+                        "local_address": "", 
+                        "authentication_key": "", 
+                        "description": ""
+                    }
+                }, 
+                "export_policy": "", 
+                "remote_as": 0, 
+                "description": "", 
+                "prefix_limit": {}, 
+                "local_as": 0, 
+                "multihop_ttl": 0, 
+                "apply_groups": [], 
+                "local_address": "7.7.7.7", 
+                "remove_private_as": false, 
+                "multipath": false, 
+                "type": "internal", 
+                "import_policy": ""
+            }
+        }
     }
 }
