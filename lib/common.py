@@ -12,10 +12,10 @@ def load_json_from_file(json_file):
 def render_table_from_template(template_file, header, table):
     env = Environment(loader=FileSystemLoader(DIRECTORY), undefined=StrictUndefined)
     template = env.get_template(template_file)
-    print template.render(header=header, table=table)
+    return template.render(header=header, table=table)
 
 def get_headers(dataset):
-    return [''] + (dataset.items()[0][1].keys())
+    return [' <> '] + (dataset.items()[0][1].keys())
 
 def get_table(dataset):
     table = []
@@ -25,3 +25,8 @@ def get_table(dataset):
             line.append(item[1])
         table.append(line)
     return table
+
+def append_to_file(filename, text):
+    file = open(DIRECTORY + filename,'a')
+    file.write(text.encode('utf8'))
+    file.close()

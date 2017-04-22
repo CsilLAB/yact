@@ -15,13 +15,16 @@ def display_text(filename, scope):
         headers = common.get_headers(dataset)
         table = common.get_table(dataset)
 
-    print tabulate.tabulate(table, headers, tablefmt="fancy_grid")
+    output = tabulate.tabulate(table, headers, tablefmt="fancy_grid")
+    print output
+    return output
 
 def main():
     filename = 'data/output.json'
+    output_file = 'output/output.txt'
 
-    display_text(filename, 'interfaces')
-    display_text(filename, 'interfaces_counters')
+    common.append_to_file(output_file, display_text(filename, 'interfaces'))
+    common.append_to_file(output_file, display_text(filename, 'interfaces_counters'))
     #display_text(filename, 'lldp_neighbors')
 
 if __name__ == "__main__":
