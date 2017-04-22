@@ -33,7 +33,7 @@ def validate(devices, debug):
         }
         dev = driver(**device_config)
         dev.open()
-        validation_file = "/home/gabriele/test_yact/yact/validation_files/validate-{0}.yml".format(device)
+        validation_file = "validation_files/validate-{0}.yml".format(device)
         validation_results = dev.compliance_report(validation_file)
 
         for result in validation_results:

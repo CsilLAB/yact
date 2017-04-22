@@ -231,7 +231,7 @@
             "Management1": {
                 "is_enabled": true, 
                 "description": "", 
-                "last_flapped": 1492826646.0074666, 
+                "last_flapped": 1492826646.007467, 
                 "is_up": true, 
                 "mac_address": "2C:C2:60:0B:DA:88", 
                 "speed": 1000
@@ -239,7 +239,7 @@
             "Ethernet2": {
                 "is_enabled": true, 
                 "description": "CONNECTS_to_Ethernet1_on_eos-leaf2", 
-                "last_flapped": 1492826646.0074666, 
+                "last_flapped": 1492826646.0074668, 
                 "is_up": true, 
                 "mac_address": "2C:C2:60:03:16:F6", 
                 "speed": 1000
@@ -247,7 +247,7 @@
             "Ethernet3": {
                 "is_enabled": true, 
                 "description": "CONNECTS_to_ge-0/0/1_on_vmx8", 
-                "last_flapped": 1492826645.8274553, 
+                "last_flapped": 1492826645.827456, 
                 "is_up": true, 
                 "mac_address": "2C:C2:60:16:4B:47", 
                 "speed": 1000
@@ -255,7 +255,7 @@
             "Ethernet1": {
                 "is_enabled": true, 
                 "description": "CONNECTS_to_Ethernet1_on_eos-leaf1", 
-                "last_flapped": 1492826646.087472, 
+                "last_flapped": 1492826646.0874717, 
                 "is_up": true, 
                 "mac_address": "2C:C2:60:29:AB:7C", 
                 "speed": 1000
@@ -279,7 +279,7 @@
             "Ethernet4": {
                 "is_enabled": true, 
                 "description": "CONNECTS_to_ge-0/0/0_on_vmx9", 
-                "last_flapped": 1492826645.8274555, 
+                "last_flapped": 1492826645.827456, 
                 "is_up": true, 
                 "mac_address": "2C:C2:60:58:43:E6", 
                 "speed": 1000
@@ -287,7 +287,7 @@
             "Ethernet5": {
                 "is_enabled": true, 
                 "description": "", 
-                "last_flapped": 1492826646.007467, 
+                "last_flapped": 1492826646.0074673, 
                 "is_up": true, 
                 "mac_address": "2C:C2:60:05:85:D6", 
                 "speed": 1000
@@ -462,7 +462,7 @@
                 "priority": "0", 
                 "state": "FULL", 
                 "vrf": "default", 
-                "dead_time": "00:00:38", 
+                "dead_time": "00:00:36", 
                 "interface": "Ethernet2", 
                 "neighbor_id": "10.0.0.22"
             }, 
@@ -471,7 +471,7 @@
                 "priority": "128", 
                 "state": "FULL", 
                 "vrf": "default", 
-                "dead_time": "00:00:33", 
+                "dead_time": "00:00:37", 
                 "interface": "Ethernet3", 
                 "neighbor_id": "8.8.8.8"
             }, 
@@ -480,14 +480,14 @@
                 "priority": "128", 
                 "state": "FULL", 
                 "vrf": "default", 
-                "dead_time": "00:00:34", 
+                "dead_time": "00:00:36", 
                 "interface": "Ethernet4", 
                 "neighbor_id": "9.9.9.9"
             }
         ], 
         "facts": {
             "os_version": "4.15.2F-2663444.4152F", 
-            "uptime": 52014, 
+            "uptime": 54444, 
             "interface_list": [
                 "Ethernet1", 
                 "Ethernet2", 
@@ -690,7 +690,7 @@
             "ge-0/0/3": {
                 "tx_multicast_packets": 0, 
                 "tx_discards": 0, 
-                "tx_octets": 513636, 
+                "tx_octets": 537648, 
                 "tx_errors": 0, 
                 "rx_octets": 0, 
                 "tx_unicast_packets": 0, 
@@ -704,7 +704,7 @@
             "ge-0/0/2": {
                 "tx_multicast_packets": 0, 
                 "tx_discards": 0, 
-                "tx_octets": 512532, 
+                "tx_octets": 536820, 
                 "tx_errors": 0, 
                 "rx_octets": 0, 
                 "tx_unicast_packets": 0, 
@@ -718,9 +718,9 @@
             "ge-0/0/1": {
                 "tx_multicast_packets": 0, 
                 "tx_discards": 0, 
-                "tx_octets": 856860, 
+                "tx_octets": 936450, 
                 "tx_errors": 0, 
-                "rx_octets": 669732, 
+                "rx_octets": 730659, 
                 "tx_unicast_packets": 0, 
                 "rx_errors": 0, 
                 "tx_broadcast_packets": 0, 
@@ -732,9 +732,9 @@
             "ge-0/0/0": {
                 "tx_multicast_packets": 0, 
                 "tx_discards": 0, 
-                "tx_octets": 859227, 
+                "tx_octets": 938348, 
                 "tx_errors": 0, 
-                "rx_octets": 794555, 
+                "rx_octets": 865067, 
                 "tx_unicast_packets": 0, 
                 "rx_errors": 0, 
                 "tx_broadcast_packets": 0, 
@@ -778,7 +778,7 @@
                 "peers": {
                     "8.8.8.8": {
                         "is_enabled": true, 
-                        "uptime": 12945, 
+                        "uptime": 15373, 
                         "remote_as": 171, 
                         "description": "", 
                         "remote_id": "8.8.8.8", 
@@ -794,7 +794,7 @@
                     }, 
                     "9.9.9.9": {
                         "is_enabled": true, 
-                        "uptime": 12985, 
+                        "uptime": 15413, 
                         "remote_as": 171, 
                         "description": "", 
                         "remote_id": "9.9.9.9", 
@@ -816,7 +816,7 @@
             "ge-0/0/7": {
                 "is_enabled": true, 
                 "description": "", 
-                "last_flapped": 51612.0, 
+                "last_flapped": 54041.0, 
                 "is_up": false, 
                 "mac_address": "00:05:86:71:54:07", 
                 "speed": 1000
@@ -824,7 +824,7 @@
             "ge-0/0/6": {
                 "is_enabled": true, 
                 "description": "", 
-                "last_flapped": 51612.0, 
+                "last_flapped": 54041.0, 
                 "is_up": false, 
                 "mac_address": "00:05:86:71:54:06", 
                 "speed": 1000
@@ -832,7 +832,7 @@
             "ge-0/0/5": {
                 "is_enabled": true, 
                 "description": "", 
-                "last_flapped": 51612.0, 
+                "last_flapped": 54041.0, 
                 "is_up": true, 
                 "mac_address": "2C:C2:60:36:AD:7E", 
                 "speed": 1000
@@ -840,7 +840,7 @@
             "ge-0/0/4": {
                 "is_enabled": true, 
                 "description": "", 
-                "last_flapped": 51612.0, 
+                "last_flapped": 54041.0, 
                 "is_up": true, 
                 "mac_address": "2C:C2:60:52:DF:F9", 
                 "speed": 1000
@@ -848,7 +848,7 @@
             "ge-0/0/3": {
                 "is_enabled": true, 
                 "description": "", 
-                "last_flapped": 51612.0, 
+                "last_flapped": 54041.0, 
                 "is_up": true, 
                 "mac_address": "2C:C2:60:75:E4:FA", 
                 "speed": 1000
@@ -856,7 +856,7 @@
             "ge-0/0/2": {
                 "is_enabled": true, 
                 "description": "", 
-                "last_flapped": 51612.0, 
+                "last_flapped": 54041.0, 
                 "is_up": true, 
                 "mac_address": "2C:C2:60:27:86:5F", 
                 "speed": 1000
@@ -864,7 +864,7 @@
             "ge-0/0/1": {
                 "is_enabled": true, 
                 "description": "CONNECTS_to_ge-0/0/1_on_vmx9", 
-                "last_flapped": 51612.0, 
+                "last_flapped": 54041.0, 
                 "is_up": true, 
                 "mac_address": "2C:C2:60:6D:F1:3E", 
                 "speed": 1000
@@ -872,7 +872,7 @@
             "ge-0/0/0": {
                 "is_enabled": true, 
                 "description": "CONNECTS_to_ge-0/0/0_on_vmx8", 
-                "last_flapped": 51612.0, 
+                "last_flapped": 54041.0, 
                 "is_up": true, 
                 "mac_address": "2C:C2:60:71:67:42", 
                 "speed": 1000
@@ -880,7 +880,7 @@
             "ge-0/0/9": {
                 "is_enabled": true, 
                 "description": "", 
-                "last_flapped": 51612.0, 
+                "last_flapped": 54041.0, 
                 "is_up": false, 
                 "mac_address": "00:05:86:71:54:09", 
                 "speed": 1000
@@ -888,7 +888,7 @@
             "ge-0/0/8": {
                 "is_enabled": true, 
                 "description": "", 
-                "last_flapped": 51612.0, 
+                "last_flapped": 54041.0, 
                 "is_up": false, 
                 "mac_address": "00:05:86:71:54:08", 
                 "speed": 1000
@@ -984,7 +984,7 @@
             "fxp0": {
                 "is_enabled": true, 
                 "description": "", 
-                "last_flapped": 51835.0, 
+                "last_flapped": 54264.0, 
                 "is_up": true, 
                 "mac_address": "2C:C2:60:12:39:19", 
                 "speed": 1000
@@ -1096,9 +1096,9 @@
                         "local_as_prepend": true, 
                         "export_policy": "", 
                         "multihop": false, 
-                        "input_messages": 480, 
+                        "input_messages": 569, 
                         "previous_connection_state": "OpenConfirm", 
-                        "output_messages": 478, 
+                        "output_messages": 567, 
                         "remove_private_as": false, 
                         "multipath": false, 
                         "messages_queued_out": 0, 
@@ -1133,9 +1133,9 @@
                         "local_as_prepend": true, 
                         "export_policy": "", 
                         "multihop": false, 
-                        "input_messages": 399, 
+                        "input_messages": 474, 
                         "previous_connection_state": "OpenConfirm", 
-                        "output_messages": 481, 
+                        "output_messages": 570, 
                         "remove_private_as": false, 
                         "multipath": false, 
                         "messages_queued_out": 0, 
@@ -2200,7 +2200,7 @@
                 "address": "10.1.254.1", 
                 "priority": "128", 
                 "state": "Full", 
-                "dead_time": "38", 
+                "dead_time": "37", 
                 "interface": "ge-0/0/0.0", 
                 "neighbor_id": "8.8.8.8"
             }, 
@@ -2208,14 +2208,14 @@
                 "address": "10.1.254.5", 
                 "priority": "128", 
                 "state": "Full", 
-                "dead_time": "36", 
+                "dead_time": "31", 
                 "interface": "ge-0/0/1.0", 
                 "neighbor_id": "9.9.9.9"
             }
         ], 
         "facts": {
             "os_version": "15.1F4.15", 
-            "uptime": 51960, 
+            "uptime": 54360, 
             "interface_list": [
                 "ge-0/0/0", 
                 "lc-0/0/0", 
