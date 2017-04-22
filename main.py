@@ -1,14 +1,18 @@
+#!/usr/bin/env python
 # import helpers
 from napalm_base import get_network_driver
 from lib.helpers import build_help
 from lib.helpers import configure_logging
 from lib.helpers import parse_optional_args
+from lib.device_info import get_device_information
+from lib.device_info import build_json
 
 import sys
 import yaml
 import json
 import logging
-logger = logging.getLogger('main.py')
+
+logger = logging.getLogger('yact')
 
 def get_file_content(config):
     try:
@@ -36,6 +40,10 @@ def get_devices_from_config(config, limit):
 
 def run(config, limit, scope):
     devices = get_devices_from_config(config, limit)
+    try:
+        build_json(devices)
+    except:
+        raise
 
 def main():
     args = build_help()

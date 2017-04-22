@@ -7,11 +7,11 @@ credentials:
 
 devices:
 - hostname: eos-spine1
-  ip: 52.213.163.131 
+  ip: 52.213.163.131
   driver: eos
   credentials: hackathon
 - hostname: vmx7
-  ip: 52.214.233.142
+  ip: 52.214.223.142
   driver: junos
   credentials: hackathon
 

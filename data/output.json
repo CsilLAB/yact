@@ -1,0 +1,610 @@
+{
+    "eos-spine1": {
+        "username": "ntc", 
+        "interfaces_counters": {
+            "Management1": {
+                "tx_multicast_packets": 0, 
+                "tx_discards": 0, 
+                "tx_octets": 0, 
+                "tx_errors": 0, 
+                "rx_octets": 0, 
+                "tx_unicast_packets": 0, 
+                "rx_errors": 0, 
+                "tx_broadcast_packets": 0, 
+                "rx_multicast_packets": 0, 
+                "rx_broadcast_packets": 0, 
+                "rx_discards": 0, 
+                "rx_unicast_packets": 0
+            }, 
+            "Ethernet2": {
+                "tx_multicast_packets": 0, 
+                "tx_discards": 0, 
+                "tx_octets": 0, 
+                "tx_errors": 0, 
+                "rx_octets": 0, 
+                "tx_unicast_packets": 0, 
+                "rx_errors": 0, 
+                "tx_broadcast_packets": 0, 
+                "rx_multicast_packets": 0, 
+                "rx_broadcast_packets": 0, 
+                "rx_discards": 0, 
+                "rx_unicast_packets": 0
+            }, 
+            "Ethernet3": {
+                "tx_multicast_packets": 0, 
+                "tx_discards": 0, 
+                "tx_octets": 0, 
+                "tx_errors": 0, 
+                "rx_octets": 0, 
+                "tx_unicast_packets": 0, 
+                "rx_errors": 0, 
+                "tx_broadcast_packets": 0, 
+                "rx_multicast_packets": 0, 
+                "rx_broadcast_packets": 0, 
+                "rx_discards": 0, 
+                "rx_unicast_packets": 0
+            }, 
+            "Ethernet1": {
+                "tx_multicast_packets": 0, 
+                "tx_discards": 0, 
+                "tx_octets": 0, 
+                "tx_errors": 0, 
+                "rx_octets": 0, 
+                "tx_unicast_packets": 0, 
+                "rx_errors": 0, 
+                "tx_broadcast_packets": 0, 
+                "rx_multicast_packets": 0, 
+                "rx_broadcast_packets": 0, 
+                "rx_discards": 0, 
+                "rx_unicast_packets": 0
+            }, 
+            "Ethernet6": {
+                "tx_multicast_packets": 0, 
+                "tx_discards": 0, 
+                "tx_octets": 0, 
+                "tx_errors": 0, 
+                "rx_octets": 0, 
+                "tx_unicast_packets": 0, 
+                "rx_errors": 0, 
+                "tx_broadcast_packets": 0, 
+                "rx_multicast_packets": 0, 
+                "rx_broadcast_packets": 0, 
+                "rx_discards": 0, 
+                "rx_unicast_packets": 0
+            }, 
+            "Ethernet7": {
+                "tx_multicast_packets": 0, 
+                "tx_discards": 0, 
+                "tx_octets": 0, 
+                "tx_errors": 0, 
+                "rx_octets": 0, 
+                "tx_unicast_packets": 0, 
+                "rx_errors": 0, 
+                "tx_broadcast_packets": 0, 
+                "rx_multicast_packets": 0, 
+                "rx_broadcast_packets": 0, 
+                "rx_discards": 0, 
+                "rx_unicast_packets": 0
+            }, 
+            "Ethernet4": {
+                "tx_multicast_packets": 0, 
+                "tx_discards": 0, 
+                "tx_octets": 0, 
+                "tx_errors": 0, 
+                "rx_octets": 0, 
+                "tx_unicast_packets": 0, 
+                "rx_errors": 0, 
+                "tx_broadcast_packets": 0, 
+                "rx_multicast_packets": 0, 
+                "rx_broadcast_packets": 0, 
+                "rx_discards": 0, 
+                "rx_unicast_packets": 0
+            }, 
+            "Ethernet5": {
+                "tx_multicast_packets": 0, 
+                "tx_discards": 0, 
+                "tx_octets": 0, 
+                "tx_errors": 0, 
+                "rx_octets": 0, 
+                "tx_unicast_packets": 0, 
+                "rx_errors": 0, 
+                "tx_broadcast_packets": 0, 
+                "rx_multicast_packets": 0, 
+                "rx_broadcast_packets": 0, 
+                "rx_discards": 0, 
+                "rx_unicast_packets": 0
+            }
+        }, 
+        "ip": "52.213.163.131", 
+        "interfaces": {
+            "Management1": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": 1492826646.0074666, 
+                "is_up": true, 
+                "mac_address": "2C:C2:60:0B:DA:88", 
+                "speed": 1000
+            }, 
+            "Ethernet2": {
+                "is_enabled": true, 
+                "description": "CONNECTS_to_Ethernet1_on_eos-leaf2", 
+                "last_flapped": 1492826646.007467, 
+                "is_up": true, 
+                "mac_address": "2C:C2:60:03:16:F6", 
+                "speed": 1000
+            }, 
+            "Ethernet3": {
+                "is_enabled": true, 
+                "description": "CONNECTS_to_ge-0/0/1_on_vmx8", 
+                "last_flapped": 1492826645.8274558, 
+                "is_up": true, 
+                "mac_address": "2C:C2:60:16:4B:47", 
+                "speed": 1000
+            }, 
+            "Ethernet1": {
+                "is_enabled": true, 
+                "description": "CONNECTS_to_Ethernet1_on_eos-leaf1", 
+                "last_flapped": 1492826646.0874715, 
+                "is_up": true, 
+                "mac_address": "2C:C2:60:29:AB:7C", 
+                "speed": 1000
+            }, 
+            "Ethernet6": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": 1492826645.8274553, 
+                "is_up": true, 
+                "mac_address": "2C:C2:60:65:C4:59", 
+                "speed": 1000
+            }, 
+            "Ethernet7": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": 1492826646.0074666, 
+                "is_up": true, 
+                "mac_address": "2C:C2:60:3A:E0:4D", 
+                "speed": 1000
+            }, 
+            "Ethernet4": {
+                "is_enabled": true, 
+                "description": "CONNECTS_to_ge-0/0/0_on_vmx9", 
+                "last_flapped": 1492826645.8274553, 
+                "is_up": true, 
+                "mac_address": "2C:C2:60:58:43:E6", 
+                "speed": 1000
+            }, 
+            "Ethernet5": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": 1492826646.0074673, 
+                "is_up": true, 
+                "mac_address": "2C:C2:60:05:85:D6", 
+                "speed": 1000
+            }
+        }, 
+        "driver": "eos", 
+        "password": "ntc123"
+    }, 
+    "vmx7": {
+        "username": "ntc", 
+        "interfaces_counters": {
+            "ge-0/0/7": {
+                "tx_multicast_packets": 0, 
+                "tx_discards": 0, 
+                "tx_octets": 0, 
+                "tx_errors": 0, 
+                "rx_octets": 0, 
+                "tx_unicast_packets": 0, 
+                "rx_errors": 0, 
+                "tx_broadcast_packets": 0, 
+                "rx_multicast_packets": 0, 
+                "rx_broadcast_packets": 0, 
+                "rx_discards": 0, 
+                "rx_unicast_packets": 0
+            }, 
+            "ge-0/0/6": {
+                "tx_multicast_packets": 0, 
+                "tx_discards": 0, 
+                "tx_octets": 0, 
+                "tx_errors": 0, 
+                "rx_octets": 0, 
+                "tx_unicast_packets": 0, 
+                "rx_errors": 0, 
+                "tx_broadcast_packets": 0, 
+                "rx_multicast_packets": 0, 
+                "rx_broadcast_packets": 0, 
+                "rx_discards": 0, 
+                "rx_unicast_packets": 0
+            }, 
+            "ge-0/0/5": {
+                "tx_multicast_packets": 0, 
+                "tx_discards": 0, 
+                "tx_octets": 0, 
+                "tx_errors": 0, 
+                "rx_octets": 0, 
+                "tx_unicast_packets": 0, 
+                "rx_errors": 0, 
+                "tx_broadcast_packets": 0, 
+                "rx_multicast_packets": 0, 
+                "rx_broadcast_packets": 0, 
+                "rx_discards": 0, 
+                "rx_unicast_packets": 0
+            }, 
+            "ge-0/0/4": {
+                "tx_multicast_packets": 0, 
+                "tx_discards": 0, 
+                "tx_octets": 0, 
+                "tx_errors": 0, 
+                "rx_octets": 0, 
+                "tx_unicast_packets": 0, 
+                "rx_errors": 0, 
+                "tx_broadcast_packets": 0, 
+                "rx_multicast_packets": 0, 
+                "rx_broadcast_packets": 0, 
+                "rx_discards": 0, 
+                "rx_unicast_packets": 0
+            }, 
+            "ge-0/0/3": {
+                "tx_multicast_packets": 0, 
+                "tx_discards": 0, 
+                "tx_octets": 417036, 
+                "tx_errors": 0, 
+                "rx_octets": 0, 
+                "tx_unicast_packets": 0, 
+                "rx_errors": 0, 
+                "tx_broadcast_packets": 0, 
+                "rx_multicast_packets": 0, 
+                "rx_broadcast_packets": 0, 
+                "rx_discards": 0, 
+                "rx_unicast_packets": 0
+            }, 
+            "ge-0/0/2": {
+                "tx_multicast_packets": 0, 
+                "tx_discards": 0, 
+                "tx_octets": 415932, 
+                "tx_errors": 0, 
+                "rx_octets": 0, 
+                "tx_unicast_packets": 0, 
+                "rx_errors": 0, 
+                "tx_broadcast_packets": 0, 
+                "rx_multicast_packets": 0, 
+                "rx_broadcast_packets": 0, 
+                "rx_discards": 0, 
+                "rx_unicast_packets": 0
+            }, 
+            "ge-0/0/1": {
+                "tx_multicast_packets": 0, 
+                "tx_discards": 0, 
+                "tx_octets": 539449, 
+                "tx_errors": 0, 
+                "rx_octets": 426389, 
+                "tx_unicast_packets": 0, 
+                "rx_errors": 0, 
+                "tx_broadcast_packets": 0, 
+                "rx_multicast_packets": 0, 
+                "rx_broadcast_packets": 0, 
+                "rx_discards": 0, 
+                "rx_unicast_packets": 0
+            }, 
+            "ge-0/0/0": {
+                "tx_multicast_packets": 0, 
+                "tx_discards": 0, 
+                "tx_octets": 542230, 
+                "tx_errors": 0, 
+                "rx_octets": 512346, 
+                "tx_unicast_packets": 0, 
+                "rx_errors": 0, 
+                "tx_broadcast_packets": 0, 
+                "rx_multicast_packets": 0, 
+                "rx_broadcast_packets": 0, 
+                "rx_discards": 0, 
+                "rx_unicast_packets": 0
+            }, 
+            "ge-0/0/9": {
+                "tx_multicast_packets": 0, 
+                "tx_discards": 0, 
+                "tx_octets": 0, 
+                "tx_errors": 0, 
+                "rx_octets": 0, 
+                "tx_unicast_packets": 0, 
+                "rx_errors": 0, 
+                "tx_broadcast_packets": 0, 
+                "rx_multicast_packets": 0, 
+                "rx_broadcast_packets": 0, 
+                "rx_discards": 0, 
+                "rx_unicast_packets": 0
+            }, 
+            "ge-0/0/8": {
+                "tx_multicast_packets": 0, 
+                "tx_discards": 0, 
+                "tx_octets": 0, 
+                "tx_errors": 0, 
+                "rx_octets": 0, 
+                "tx_unicast_packets": 0, 
+                "rx_errors": 0, 
+                "tx_broadcast_packets": 0, 
+                "rx_multicast_packets": 0, 
+                "rx_broadcast_packets": 0, 
+                "rx_discards": 0, 
+                "rx_unicast_packets": 0
+            }
+        }, 
+        "ip": "52.214.223.142", 
+        "interfaces": {
+            "ge-0/0/7": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": 41908.0, 
+                "is_up": false, 
+                "mac_address": "00:05:86:71:54:07", 
+                "speed": 1000
+            }, 
+            "ge-0/0/6": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": 41908.0, 
+                "is_up": false, 
+                "mac_address": "00:05:86:71:54:06", 
+                "speed": 1000
+            }, 
+            "ge-0/0/5": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": 41908.0, 
+                "is_up": true, 
+                "mac_address": "2C:C2:60:36:AD:7E", 
+                "speed": 1000
+            }, 
+            "ge-0/0/4": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": 41908.0, 
+                "is_up": true, 
+                "mac_address": "2C:C2:60:52:DF:F9", 
+                "speed": 1000
+            }, 
+            "ge-0/0/3": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": 41908.0, 
+                "is_up": true, 
+                "mac_address": "2C:C2:60:75:E4:FA", 
+                "speed": 1000
+            }, 
+            "ge-0/0/2": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": 41908.0, 
+                "is_up": true, 
+                "mac_address": "2C:C2:60:27:86:5F", 
+                "speed": 1000
+            }, 
+            "ge-0/0/1": {
+                "is_enabled": true, 
+                "description": "CONNECTS_to_ge-0/0/1_on_vmx9", 
+                "last_flapped": 41908.0, 
+                "is_up": true, 
+                "mac_address": "2C:C2:60:6D:F1:3E", 
+                "speed": 1000
+            }, 
+            "ge-0/0/0": {
+                "is_enabled": true, 
+                "description": "CONNECTS_to_ge-0/0/0_on_vmx8", 
+                "last_flapped": 41908.0, 
+                "is_up": true, 
+                "mac_address": "2C:C2:60:71:67:42", 
+                "speed": 1000
+            }, 
+            "ge-0/0/9": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": 41908.0, 
+                "is_up": false, 
+                "mac_address": "00:05:86:71:54:09", 
+                "speed": 1000
+            }, 
+            "ge-0/0/8": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": 41908.0, 
+                "is_up": false, 
+                "mac_address": "00:05:86:71:54:08", 
+                "speed": 1000
+            }, 
+            "tap": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": -1.0, 
+                "is_up": true, 
+                "mac_address": "Unspecified", 
+                "speed": -1
+            }, 
+            "demux0": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": -1.0, 
+                "is_up": true, 
+                "mac_address": "Unspecified", 
+                "speed": -1
+            }, 
+            "pip0": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": -1.0, 
+                "is_up": true, 
+                "mac_address": "00:05:86:71:5B:B0", 
+                "speed": -1
+            }, 
+            "pimd": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": -1.0, 
+                "is_up": true, 
+                "mac_address": "None", 
+                "speed": -1
+            }, 
+            "mtun": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": -1.0, 
+                "is_up": true, 
+                "mac_address": "None", 
+                "speed": -1
+            }, 
+            "gre": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": -1.0, 
+                "is_up": true, 
+                "mac_address": "None", 
+                "speed": -1
+            }, 
+            "em1": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": -1.0, 
+                "is_up": true, 
+                "mac_address": "2C:C2:60:3E:C1:C4", 
+                "speed": 1000
+            }, 
+            "em2": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": -1.0, 
+                "is_up": true, 
+                "mac_address": "2C:C2:60:1F:96:FA", 
+                "speed": 1000
+            }, 
+            "lc-0/0/0": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": -1.0, 
+                "is_up": true, 
+                "mac_address": "Unspecified", 
+                "speed": 800
+            }, 
+            "irb": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": -1.0, 
+                "is_up": true, 
+                "mac_address": "00:05:86:71:5B:F0", 
+                "speed": -1
+            }, 
+            "dsc": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": -1.0, 
+                "is_up": true, 
+                "mac_address": "Unspecified", 
+                "speed": -1
+            }, 
+            "fxp0": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": 42131.0, 
+                "is_up": true, 
+                "mac_address": "2C:C2:60:12:39:19", 
+                "speed": 1000
+            }, 
+            "vtep": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": -1.0, 
+                "is_up": true, 
+                "mac_address": "Unspecified", 
+                "speed": -1
+            }, 
+            "cbp0": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": -1.0, 
+                "is_up": true, 
+                "mac_address": "00:05:86:71:54:11", 
+                "speed": -1
+            }, 
+            "jsrv": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": -1.0, 
+                "is_up": true, 
+                "mac_address": "38:08:00:00:00:00", 
+                "speed": -1
+            }, 
+            "pp0": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": -1.0, 
+                "is_up": true, 
+                "mac_address": "Unspecified", 
+                "speed": -1
+            }, 
+            "pfh-0/0/0": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": -1.0, 
+                "is_up": true, 
+                "mac_address": "Unspecified", 
+                "speed": 800
+            }, 
+            "pfe-0/0/0": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": -1.0, 
+                "is_up": true, 
+                "mac_address": "Unspecified", 
+                "speed": 800
+            }, 
+            "lsi": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": -1.0, 
+                "is_up": true, 
+                "mac_address": "Unspecified", 
+                "speed": -1
+            }, 
+            "ipip": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": -1.0, 
+                "is_up": true, 
+                "mac_address": "None", 
+                "speed": -1
+            }, 
+            "lo0": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": -1.0, 
+                "is_up": true, 
+                "mac_address": "Unspecified", 
+                "speed": -1
+            }, 
+            "pime": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": -1.0, 
+                "is_up": true, 
+                "mac_address": "None", 
+                "speed": -1
+            }, 
+            "esi": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": -1.0, 
+                "is_up": true, 
+                "mac_address": "Unspecified", 
+                "speed": -1
+            }, 
+            ".local.": {
+                "is_enabled": true, 
+                "description": "", 
+                "last_flapped": -1.0, 
+                "is_up": true, 
+                "mac_address": "Unspecified", 
+                "speed": -1
+            }
+        }, 
+        "driver": "junos", 
+        "password": "ntc123"
+    }
+}
