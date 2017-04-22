@@ -6,6 +6,7 @@ from lib.helpers import configure_logging
 from lib.helpers import parse_optional_args
 from lib.device_info import get_device_information
 from lib.device_info import build_json
+from lib.validation import validate
 
 import sys
 import yaml
@@ -27,10 +28,12 @@ def get_devices_from_config(config, limit):
     for device in config.get('devices'):
         temp = {}
         if limit and device.get('hostname') == limit:
+            new_temp = {}
             temp.update(config.get('credentials')[device['credentials']])
             temp['driver'] = device['driver']
             temp['ip'] = device['ip']
-            break
+            new_temp[device['hostname']] = temp
+            return new_temp
         else:
             temp.update(config.get('credentials')[device['credentials']])
             temp['driver'] = device['driver']
@@ -38,18 +41,21 @@ def get_devices_from_config(config, limit):
         devices[device['hostname']] = temp
     return devices
 
-def run(config, limit, scope):
+def run(config, limit, scope, debug):
     devices = get_devices_from_config(config, limit)
-    try:
-        devices_info_bulk = build_json(devices)
-    except:
-        raise
+    if scope == 'getters':
+        try:
+            build_json(devices)
+        except:
+            raise
+    elif scope == 'validate':
+        validate(devices, debug)
 
 def main():
     args = build_help()
     configure_logging(logger, args.debug)
 
-    run(args.config_file, args.limit, args.scope)
+    run(args.config_file, args.limit, args.scope, args.debug)
     sys.exit(0)
 
 if __name__ == '__main__':
