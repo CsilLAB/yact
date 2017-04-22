@@ -1,0 +1,14 @@
+<table border="1">
+<tr>
+{% for text in header %}
+<th>{{ text }}</th>
+{% endfor -%}
+</tr>
+{% for line in table %}
+<tr>
+  {% for text in line %}
+<td>{{ text }}</td>
+  {% endfor -%}
+</tr>
+{% endfor -%}
+</table>
