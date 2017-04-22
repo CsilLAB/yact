@@ -1,3 +1,18 @@
+# eos-spine1
+
+## interfaces_counters
+
+ <>  |tx_multicast_packets |tx_discards |tx_octets |tx_errors |rx_octets |tx_unicast_packets |rx_errors |tx_broadcast_packets |rx_multicast_packets |rx_broadcast_packets |rx_discards |rx_unicast_packets |
+--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |
+  Management1 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |
+  Ethernet2 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |
+  Ethernet3 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |
+  Ethernet1 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |
+  Ethernet6 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |
+  Ethernet7 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |
+  Ethernet4 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |
+  Ethernet5 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |
+
 # vmx7
 
 ## interfaces_counters
@@ -14,6 +29,21 @@
   ge-0/0/0 |0 |0 |642179 |0 |601266 |0 |0 |0 |0 |0 |0 |0 |
   ge-0/0/9 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |
   ge-0/0/8 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |
+
+# eos-spine1
+
+## interfaces
+
+ <>  |is_enabled |description |last_flapped |is_up |mac_address |speed |
+--- |--- |--- |--- |--- |--- |--- |
+  Management1 |True | |1492826646.01 |True |2C:C2:60:0B:DA:88 |1000 |
+  Ethernet2 |True |CONNECTS_to_Ethernet1_on_eos-leaf2 |1492826646.01 |True |2C:C2:60:03:16:F6 |1000 |
+  Ethernet3 |True |CONNECTS_to_ge-0/0/1_on_vmx8 |1492826645.83 |True |2C:C2:60:16:4B:47 |1000 |
+  Ethernet1 |True |CONNECTS_to_Ethernet1_on_eos-leaf1 |1492826646.09 |True |2C:C2:60:29:AB:7C |1000 |
+  Ethernet6 |True | |1492826645.83 |True |2C:C2:60:65:C4:59 |1000 |
+  Ethernet7 |True | |1492826646.01 |True |2C:C2:60:3A:E0:4D |1000 |
+  Ethernet4 |True |CONNECTS_to_ge-0/0/0_on_vmx9 |1492826645.83 |True |2C:C2:60:58:43:E6 |1000 |
+  Ethernet5 |True | |1492826646.01 |True |2C:C2:60:05:85:D6 |1000 |
 
 # vmx7
 

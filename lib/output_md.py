@@ -3,6 +3,7 @@ import common
 def display_md(filename, scope):
 
     json_obj = common.load_json_from_file(filename)
+    output = ''
 
     for item in json_obj.items():
         device_name = item[0]
@@ -12,7 +13,7 @@ def display_md(filename, scope):
         header = common.get_headers(dataset)
         table = common.get_table(dataset)
 
-    output = common.render_table_from_template(template_file, header, table, device_name, scope);
+        output += common.render_table_from_template(template_file, header, table, device_name, scope);
     print output
     return output
 

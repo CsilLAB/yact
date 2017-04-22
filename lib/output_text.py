@@ -6,6 +6,7 @@ import tabulate
 
 def display_text(filename, scope):
     json_obj = common.load_json_from_file(filename)
+    output = ''
 
     for item in json_obj.items():
         device_name = item[0]
@@ -15,7 +16,7 @@ def display_text(filename, scope):
         headers = common.get_headers(dataset)
         table = common.get_table(dataset)
 
-    output = tabulate.tabulate(table, headers, tablefmt="fancy_grid")
+        output += tabulate.tabulate(table, headers, tablefmt="fancy_grid")
     print output
     return output
 
