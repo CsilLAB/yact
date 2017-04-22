@@ -1,4 +1,8 @@
-{%- for text in header -%} {{ text }} |{% endfor %}
+# {{ device }}
+
+## {{ scope }}
+
+{% for text in header -%} {{ text }} |{% endfor %}
 {% for text in header -%}
  --- |
 {%- endfor %}{% for line in table %}

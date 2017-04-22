@@ -1,3 +1,7 @@
+# vmx7
+
+## interfaces_counters
+
  <>  |tx_multicast_packets |tx_discards |tx_octets |tx_errors |rx_octets |tx_unicast_packets |rx_errors |tx_broadcast_packets |rx_multicast_packets |rx_broadcast_packets |rx_discards |rx_unicast_packets |
 --- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |
   ge-0/0/7 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |
@@ -10,6 +14,10 @@
   ge-0/0/0 |0 |0 |642179 |0 |601266 |0 |0 |0 |0 |0 |0 |0 |
   ge-0/0/9 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |
   ge-0/0/8 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |0 |
+
+# vmx7
+
+## interfaces
 
  <>  |is_enabled |description |last_flapped |is_up |mac_address |speed |
 --- |--- |--- |--- |--- |--- |--- |

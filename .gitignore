@@ -4,4 +4,4 @@
 *.pid
 .vagrant
 venv
-.py.swp
+*.py.swp
