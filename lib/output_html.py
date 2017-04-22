@@ -19,7 +19,7 @@ def display_html(filename, scope):
 
 def main():
     filename = 'data/output.json'
-    output_file = 'output/output.md'
+    output_file = 'output/output.html'
 
     common.clear_file(output_file)
     common.append_to_file(output_file, display_html(filename, 'interfaces_counters'))
