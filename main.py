@@ -8,11 +8,14 @@ from lib.device_info import get_device_information
 from lib.device_info import build_json
 from lib.validation import validate
 from lib.output_html import main as output_html_main
+from lib.output_md import main as output_md_main
+from lib.output_text import main as output_text_main
 
 import sys
 import yaml
 import json
 import logging
+import tabulate
 
 logger = logging.getLogger('yact')
 
@@ -48,6 +51,8 @@ def run(config, limit, scope, debug):
         try:
             build_json(devices)
             output_html_main()
+            output_md_main()
+            output_text_main()
         except:
             raise
     elif scope == 'validate':
