@@ -1,8 +1,8 @@
 # import helpers
 from napalm_base import get_network_driver
-from helpers import build_help
-from helpers import configure_logging
-from helpers import parse_optional_args
+from lib.helpers import build_help
+from lib.helpers import configure_logging
+from lib.helpers import parse_optional_args
 
 import sys
 import yaml
