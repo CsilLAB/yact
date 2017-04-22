@@ -6,7 +6,8 @@ logger = logging.getLogger('yact')
 
 GETTERS_MAPPER = {
     'get_interfaces': 'Interfaces',
-    'get_facts': 'Facts'
+    'get_facts': 'Facts',
+    'get_bgp_neighbors': 'BGP Neighbors'
 }
 
 class bcolors:
@@ -44,9 +45,9 @@ def validate(devices, debug):
                     complies = False
                     print bcolors.FAIL + "{0}".format(GETTERS_MAPPER[result]) + bcolors.ENDC
 
+        if not complies:
+            if debug:
+                print bcolors.WARNING + "\nValidation results..." + bcolors.ENDC
+                print bcolors.WARNING + json.dumps(validation_results, indent=4) + bcolors.ENDC
     if not complies:
-        if debug:
-            print bcolors.WARNING + "\nValidation results..." + bcolors.ENDC
-            print bcolors.WARNING + json.dumps(validation_results, indent=4) + bcolors.ENDC
-        else:
-            print bcolors.BOLD + "Use --debug to get full information" + bcolors.ENDC
+        print bcolors.BOLD + "Use --debug to get full information" + bcolors.ENDC

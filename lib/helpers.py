@@ -15,7 +15,7 @@ def build_help():
         dest='config_file',
         action='store',
         help='Configuration file to use.',
-        default='config.yml'
+        default='./config.yml'
     )
     parser.add_argument(
         '--limit', '-l',
