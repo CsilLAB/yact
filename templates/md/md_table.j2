@@ -1,0 +1,11 @@
+{%- for text in header -%} {{ text }} |{% endfor %}
+{% for text in header -%}
+ --- |
+{%- endfor %}
+
+{% for line in table -%}
+  {%- for text in line -%}
+{{ text }} |
+  {%- endfor -%}
+{%- endfor %}
+

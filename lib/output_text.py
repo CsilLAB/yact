@@ -4,25 +4,25 @@ import common
 import tabulate
 
 
-def display_text():
-    df = 'data/dummy.json'
-    json_obj = common.load_json_from_file(df)
+def display_text(filename, scope):
+    json_obj = common.load_json_from_file(filename)
 
-    # get headers
-    headers = ['']
-    headers = headers + (json_obj.items()[0][1].keys())
+    for item in json_obj.items():
+        device_name = item[0]
+        print  device_name
+        dataset = item[1][scope]
 
-    table = []
-    for i in range(0, len(json_obj)):
-        line = [json_obj.items()[i][0]]
-        for item in json_obj.items()[i][1].items():
-            line.append(item[1])
-        table.append(line)
+        headers = common.get_headers(dataset)
+        table = common.get_table(dataset)
 
     print tabulate.tabulate(table, headers, tablefmt="fancy_grid")
 
 def main():
-    display_text()
+    filename = 'data/output.json'
+
+    display_text(filename, 'interfaces')
+    display_text(filename, 'interfaces_counters')
+    #display_text(filename, 'lldp_neighbors')
 
 if __name__ == "__main__":
     main()
