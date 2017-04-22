@@ -1,0 +1,12 @@
+---
+
+- get_interfaces:
+    Management1:
+        is_enabled: True
+    Ethernet1:
+        is_enabled: True
+    Ethernet2:
+        is_enabled: False
+
+- get_facts:
+    hostname: eos-spine1
