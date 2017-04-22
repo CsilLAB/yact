@@ -7,6 +7,7 @@ from lib.helpers import parse_optional_args
 from lib.device_info import get_device_information
 from lib.device_info import build_json
 from lib.validation import validate
+from lib.output_html import main as output_html_main
 
 import sys
 import yaml
@@ -46,6 +47,7 @@ def run(config, limit, scope, debug):
     if scope == 'getters':
         try:
             build_json(devices)
+            output_html_main()
         except:
             raise
     elif scope == 'validate':
