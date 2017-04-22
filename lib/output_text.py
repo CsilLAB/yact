@@ -23,6 +23,7 @@ def main():
     filename = 'data/output.json'
     output_file = 'output/output.txt'
 
+    common.clear_file(output_file)
     common.append_to_file(output_file, display_text(filename, 'interfaces'))
     common.append_to_file(output_file, display_text(filename, 'interfaces_counters'))
     #display_text(filename, 'lldp_neighbors')
