@@ -1,0 +1,17 @@
+---
+
+credentials:
+  hackathon:
+    username: ntc
+    password: ntc123
+
+devices:
+- hostname: eos-spine1
+  ip: 52.213.163.131 
+  driver: eos
+  credentials: hackathon
+- hostname: vmx7
+  ip: 52.214.233.142
+  driver: junos
+  credentials: hackathon
+
