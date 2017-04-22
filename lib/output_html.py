@@ -13,9 +13,11 @@ def display_html(filename, scope):
         header = common.get_headers(dataset)
         table = common.get_table(dataset)
 
-        output += common.render_table_from_template(template_file, header, table, device_name, scope);
-    print output
-    return output
+        output += common.render_table_from_template(template_file, header, table, device_name, scope, '');
+    main_template_file = 'templates/html/main.html'
+    text = common.render_table_from_template(main_template_file, header, table, device_name, scope, output)
+    print text
+    return text
 
 def main():
     filename = 'data/output.json'
