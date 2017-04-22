@@ -1,0 +1,3 @@
+""" Display text """
+
+import common 
